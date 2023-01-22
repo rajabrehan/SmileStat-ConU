@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmileStat</title>
+</head>
+
+      <link rel="stylesheet" href="style.css".>
+    </head>   
+    <body>
+        <!-- Containing Element (div tag)-->
+        <section id = "idname" class = "classname"> 
+            <div class = "nav-container">
+                <!-- Creates an Unordered List-->
+                <ul class = "nav"></ul>
+                    <!-- List item tags and a tag (linking tag)-->
+                    <li class = "nav-item" ><a class = "nav-link" href = "#Home"> Home</a></li>
+                    <li class = "nav-item" ><a class = "nav-link" href = "#About"> About</a></li>
+                    <li class = "nav-item" ><a class = "nav-link" href = "#Questionnaire"> Questionnaire</a></li>
+                    <li class = "nav-item" ><a class = "nav-link" href = "#Emergency"> Emergency </a></li>
+                </ul>
+            </div>
+
+            <section id="Home">
+                <div> 
+                    <!--Heading Tag (diff sizes)-->
+                    </div>
+                    <div class = "stimmy-photo">
+                      <img src ="./assets/smileys.jpg" alt="happiness chart"
+                      width="600" 
+                      height="186.91">
+                  </div>
+                    <h1 class="home-title"> Hi, <span class="auto-type"></span></h1>
+                </div>
+            </section>
+
+            <!-- About us Section-->
+            <section id="About"></section>
+                <div>
+                    <h2 class="about-title">About SmileStat !</h2>
+                    <div>
+                        <p class="about-text">
+                            We're a company dedicated to maintaining a healthy onboarding system at GSoft.
+                        </p>
+                        <p class="about-text">
+                            Please be as honest as possible when answering our questionnaire. 
+                        </p>
+                        <p class="about-text">
+                          There will 100% be no reprocussions as we ensure full anonymity.
+                      </p>
+                        <p class="about-text">
+                            Your mental health is the most important thing to us and we want to let you know that we care.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+            <!-- Questionnaire Section-->
+            <section id="Questionnaire">
+                <div>
+                    <h2 class="about-title">Anonymous Questionnaire</h2>
+                    <div>
+                        <h3 class = "home-desc">
+                          Are you satisfied are with your current role and responsibilities?</h3>
+                          <div class = contact-button>
+                          <a href = ""><button class="generic-button">Yes</button></a>
+                        <a href = ""><button class="generic-button">No</button></a> 
+                      </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section id="Emergency">
+                <div>
+                  <h2 class="about-title">Emergency Complaint</h2>
+                </div>
+                <textarea class="complaint-box"> </textarea>
+                <div class = contact-button>
+                  <a href = ""><button class="generic-button">Submit</button></a>
+              </div>
+            </section>
+
+        </section> 
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        let typed = new Typed('.auto-type', {
+            strings: ["^500Welcome to SmileStat!^1000"],
+            typeSpeed: 100,
+            loop: false,
+            showCursor: false,
+        });
+   </script>
+
+   </html>
