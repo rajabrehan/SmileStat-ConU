@@ -167,12 +167,6 @@ html{
   background-color: purple;
 }
 
-.generic-button2:hover{
-  background-color: rgb(199, 125, 245);
-}
-.generic-button2:active{
-  background-color: rgb(115, 5, 188);
-}
 
 .contact-button{
   display: flex;;
