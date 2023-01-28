@@ -1,0 +1,38 @@
+#The following are lines of code to install the needed libraries, this needs to be done in terminal
+#pip install deepface
+#pip install opencv
+
+#add in the following plus the above to get this working on google cola
+#from google.colab.patches import cv2_imshow
+#from google.colab import drive
+#drive.mount('/content/drive')
+
+from deepface import DeepFace
+import cv2
+
+src ="/content/drive/MyDrive/images/test.jpg"
+
+f_model = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+
+  #capture = cv2.VideoCapture(vid_path) 
+img_path = src
+if (img_path):
+    print("image path valid")
+frame = cv2.imread(img_path)
+
+grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+face = f_model.detectMultiScale(frame,1.1,4)
+
+emotion = DeepFace.analyze(frame, actions = ["emotion"])
+print(emotion)
+
+for x,y, width, height in face:
+
+  cv2.putText(frame, str(emotion["dominant_emotion"]),
+    (x, y + height), cv2.FONT_HERSHEY_COMPLEX, 0.9, (255,255,0),2)
+  
+  cv2.rectangle(frame, (x,y),
+                (x + width, y + height), (255,255,0),2)
+
+cv2_imshow(frame)
